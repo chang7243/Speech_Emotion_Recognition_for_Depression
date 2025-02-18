@@ -1,0 +1,41 @@
+emotion_recognition_project/
+│── data/                        # 数据集存放
+│   ├── raw/                     # 原始数据（DAIC-WOZ, RAVDESS 等）
+│   ├── processed/               # 处理后的短音频 & 文本
+│   ├── pseudo_labels/           # 伪标签数据
+│   ├── splits/                  # 训练/验证/测试集划分
+│── models/                      # 训练的模型 & 预训练权重
+│   ├── wav2vec2/                # 预训练的 SSL 语音模型
+│   ├── bert/                    # 预训练的 BERT 文本模型
+│   ├── multimodal/              # 训练好的多模态 Transformer
+│── experiments/                 # 训练 & 评估的实验记录
+│   ├── logs/                    # 训练日志
+│   ├── results/                 # 评估结果
+│   ├── figures/                 # 可视化图表
+│── src/                         # 核心代码
+│   ├── preprocess/              # 数据预处理代码
+│   │   ├── split_audio.py       # 切割长音频成短音频
+│   │   ├── text_cleaning.py     # 处理文本数据（去停用词等）
+│   ├── ssl_training/            # 自监督学习（SSL）代码
+│   │   ├── train_ssl.py         # Wav2Vec2/HuBERT 预训练
+│   │   ├── config_ssl.json      # SSL 训练超参数
+│   ├── supervised_training/     # 监督微调（Fine-tuning）代码
+│   │   ├── train_supervised.py  # RAVDESS 监督学习
+│   │   ├── config_supervised.json # 监督微调参数
+│   ├── pseudo_labeling/         # 伪标签生成 & 微调
+│   │   ├── generate_pseudo_labels.py  # 伪标签生成
+│   │   ├── train_finetune.py    # 伪标签微调
+│   ├── multimodal/              # 多模态学习代码
+│   │   ├── train_mmtransformer.py  # 训练 MMTransformer
+│   ├── evaluation/              # 评估代码
+│   │   ├── evaluate_model.py    # 模型测试
+│   │   ├── metrics.py           # 计算 F1-score, ACC 等
+│── notebooks/                   # Jupyter Notebooks
+│   ├── exploratory_analysis.ipynb  # 数据探索
+│   ├── ssl_training.ipynb       # SSL 训练
+│   ├── fine_tuning.ipynb        # 监督微调
+│   ├── pseudo_labeling.ipynb    # 伪标签实验
+│── requirements.txt             # 依赖库（pip install -r requirements.txt）
+│── README.md                    # 项目介绍 & 使用指南
+│── config.yaml                   # 统一配置文件
+│── train.py                      # 入口脚本（自动运行完整流程）
