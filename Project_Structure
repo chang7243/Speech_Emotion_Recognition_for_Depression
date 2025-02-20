@@ -39,18 +39,3 @@ emotion_recognition_project/
 │── README.md                    # 项目介绍 & 使用指南
 │── config.yaml                   # 统一配置文件
 │── train.py                      # 入口脚本（自动运行完整流程）
-│── web_app/                     # Streamlit Web应用相关代码
-│   ├── app.py                   # 主应用入口 python -m streamlit run web_app/app.py
-│   ├── pages/                   # 多页面组件
-│   │   ├── audio_processor.py   # 音频预处理页面
-│   │   ├── emotion_analyzer.py  # 情绪分析页面
-│   │   ├── audio_generator.py   # 情绪音频生成页面
-│   ├── components/              # 可复用组件
-│   │   ├── audio_player.py      # 音频播放组件
-│   │   ├── visualizations.py    # 数据可视化组件
-│   │   ├── progress_bar.py      # 进度条组件
-│   ├── utils/                   # 工具函数
-│   │   ├── audio_processing.py  # 音频处理工具
-│   │   ├── model_inference.py   # 模型推理工具
-│   ├── config.py                # Web应用配置
-│   ├── requirements.txt         # Web应用依赖
