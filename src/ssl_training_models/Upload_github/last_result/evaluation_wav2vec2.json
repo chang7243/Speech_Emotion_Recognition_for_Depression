@@ -1,0 +1,43 @@
+{
+    "silhouette_score": 0.21124443411827087,
+    "feature_dim": 256,
+    "num_samples": 1055,
+    "train_loss": 64.1422,
+    "train_steps": 5440,
+    "train_time": 0.0,
+    "config": {
+        "data_dir": "/kaggle/working/train",
+        "use_kaggle": true,
+        "log_interval": 10,
+        "save_model": true,
+        "fp16": false,
+        "batch_size": 4,
+        "learning_rate": 1e-05,
+        "total_epochs": 5,
+        "output_dir": "/kaggle/working/models/run_2",
+        "log_file": "fine_tuning_run_2.log",
+        "weight_decay": 0.0001,
+        "hidden_dropout": 0.1,
+        "gradient_accumulation_steps": 2,
+        "frozen_layers": 6,
+        "gradient_checkpointing": true,
+        "unfreeze_stages": [
+            {
+                "epochs": 1,
+                "num_layers": 2,
+                "lr_multiplier": 1.0
+            },
+            {
+                "epochs": 2,
+                "num_layers": 3,
+                "lr_multiplier": 0.5
+            },
+            {
+                "epochs": 2,
+                "num_layers": 4,
+                "lr_multiplier": 0.2
+            }
+        ],
+        "early_stopping_patience": 2
+    }
+}
