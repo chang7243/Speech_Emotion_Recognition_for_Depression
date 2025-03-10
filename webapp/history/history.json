@@ -1,0 +1,41 @@
+[
+    {
+        "audio_file": "test.wav",
+        "transcript": "please go now and make sure they stay from away, come back as soon as you can",
+        "emotions": {
+            "Neutral": "81.00%",
+            "Joy": "1.03%",
+            "Sad": "11.06%",
+            "Angry": "2.88%",
+            "Surprised": "0.52%",
+            "Fearful": "2.77%",
+            "Disgusted": "0.74%"
+        }
+    },
+    {
+        "audio_file": "test.wav",
+        "transcript": "please go now and make sure they stay from away, come back as soon as you can",
+        "emotions": {
+            "Neutral": "81.00%",
+            "Joy": "1.03%",
+            "Sad": "11.06%",
+            "Angry": "2.88%",
+            "Surprised": "0.52%",
+            "Fearful": "2.77%",
+            "Disgusted": "0.74%"
+        }
+    },
+    {
+        "audio_file": "test.wav",
+        "transcript": "Please go now, and make sure to stay safe on the way. Come back as soon as you can.",
+        "emotions": {
+            "Neutral": "54.73%",
+            "Joy": "5.80%",
+            "Sad": "29.00%",
+            "Angry": "2.24%",
+            "Surprised": "0.51%",
+            "Fearful": "6.93%",
+            "Disgusted": "0.78%"
+        }
+    }
+]
